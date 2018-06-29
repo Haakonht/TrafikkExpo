@@ -1,0 +1,26 @@
+﻿<Window x:Class="TrafikkExpo.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Fragments="clr-namespace:TrafikkExpo.View.Fragments"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrafikkExpo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1300" Closing="Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/TrafikkExpo;component/Resources/MainWindowBackground.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="0.90*"/>
+            <ColumnDefinition Width="0.05*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.70*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <Fragments:Menu Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Window>

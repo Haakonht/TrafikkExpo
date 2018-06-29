@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="TrafikkExpo.View.Slides.Courses"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TrafikkExpo.View.Slides"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.70*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"/>
+            <ColumnDefinition Width="0.65*"/>
+            <ColumnDefinition Width="0.35*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Schedule" Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.7*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Våre kurs:" Grid.Row="0" HorizontalAlignment="Center" Foreground="White" FontSize="90" Margin="0,-20,0,0"/>
+            <Border Grid.Row="1" BorderThickness="0,0,0,1" BorderBrush="DimGray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.30*"/>
+                        <ColumnDefinition Width="0.25*"/>
+                        <ColumnDefinition Width="0.25*"/>
+                        <ColumnDefinition Width="0.20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Kursnavn:" Foreground="White" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="0" />
+                    <Label Content="Fra Dato:" Foreground="White" FontSize="60" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Column="1" />
+                    <Label Content="Til Dato:" Foreground="White" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" />
+                    <Label Content="Pris:" Foreground="White" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" />
+                </Grid>
+            </Border>
+            <StackPanel x:Name="Table" Orientation="Vertical" Width="Auto" Grid.Row="2">
+
+            </StackPanel>
+        </Grid>
+        <Canvas Grid.Column="2" Grid.RowSpan="3" Margin="150,0,0,0">
+            <StackPanel Orientation="Vertical" x:Name="Klasser" Canvas.Top="1080">
+                <Label Content="Trafikalt Grunnkurs" FontSize="40" Foreground="White"/>
+                <Label Content=" "/>
+                <Label Content="Klasse A" FontSize="40" Foreground="White"/>
+                <Label Content=" "/>
+                <Label Content="Klasse B Man" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse B Aut" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse BE" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse B96" FontSize="40" Foreground="White"/>
+                <Label Content=" "/>
+                <Label Content="Klasse D" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse D1" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse D1E" FontSize="40" Foreground="White"/>
+                <Label Content=" "/>
+                <Label Content="Klasse C" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse C1" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse C1E" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse CE" FontSize="40" Foreground="White"/>
+                <Label Content=" "/>
+                <Label Content="Klasse YDP" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse YDG" FontSize="40" Foreground="White"/>
+                <Label Content="Klasse EYDP" FontSize="40" Foreground="White"/>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</UserControl>

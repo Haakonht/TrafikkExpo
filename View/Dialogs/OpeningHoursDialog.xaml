@@ -1,0 +1,42 @@
+﻿<Window x:Class="TrafikkExpo.View.Dialogs.OpeningHoursDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrafikkExpo.View.Dialogs"
+        mc:Ignorable="d"
+        Title="Endre Åpningstid" Height="275" Width="300" Background="#221E1F">
+    <Grid Margin="30,10,30,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.7*"/>
+        </Grid.ColumnDefinitions>
+        <UniformGrid Columns="1" Rows="5">
+            <Label Content="Mandag:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <Label Content="Tirsag:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <Label Content="Onsdag:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <Label Content="Torsdag:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <Label Content="Fredag:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </UniformGrid>
+        <UniformGrid Columns="1" Rows="5" Grid.Column="1">
+            <TextBox x:Name="Mandag" Text=""  VerticalAlignment="Center"/>
+            <TextBox x:Name="Tirsdag" Text=""  VerticalAlignment="Center"/>
+            <TextBox x:Name="Onsdag" Text=""  VerticalAlignment="Center"/>
+            <TextBox x:Name="Torsdag" Text=""  VerticalAlignment="Center"/>
+            <TextBox x:Name="Fredag" Text=""  VerticalAlignment="Center"/>
+        </UniformGrid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.475*"/>
+                <ColumnDefinition Width="0.05*"/>
+                <ColumnDefinition Width="0.475*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Endre" Background="Green" Foreground="White" Click="confirmBtn_click"/>
+            <Button Content="Tilbake" Background="Red" Foreground="White" Click="cancelBtn_click" Grid.Column="2"/>
+        </Grid>
+    </Grid>
+</Window>

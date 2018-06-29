@@ -1,0 +1,59 @@
+﻿<Window x:Class="TrafikkExpo.View.Dialogs.CourseManagerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:window="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:TrafikkExpo.View.Dialogs"
+        mc:Ignorable="d"
+        Title="Administrer Kurs" Height="400" Width="400" Background="#221E1F">
+    <Grid Margin="30,10,30,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+             <StackPanel x:Name="CoursePanel">
+
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+                <UniformGrid Rows="4">
+                    <Label Content="Kursnavn:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Content="Fra Dato:" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+                    <Label Content="Til Dato:" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+                    <Label Content="Pris:" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+                </UniformGrid>
+                <UniformGrid Rows="4" Grid.Column="1">
+                    <TextBox x:Name="Kursnavn"  VerticalAlignment="Center"/>
+                    <window:WindowsFormsHost >
+                        <wf:DateTimePicker x:Name="FraDato" Format="Custom"></wf:DateTimePicker>
+                    </window:WindowsFormsHost>
+                    <window:WindowsFormsHost >
+                        <wf:DateTimePicker x:Name="TilDato" Format="Custom"></wf:DateTimePicker>
+                    </window:WindowsFormsHost>
+                    <TextBox x:Name="Pris"  VerticalAlignment="Center"/>
+                </UniformGrid>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,5,0,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.475*"/>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="0.475*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Legg til Kurs" Background="Green" Foreground="White" Click="confirmBtn_click"/>
+                <Button Content="Tilbake" Background="Red" Foreground="White" Click="cancelBtn_click" Grid.Column="2"/>
+             </Grid>
+        </Grid>
+    </Grid>
+</Window>
